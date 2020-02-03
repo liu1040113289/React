@@ -23,7 +23,7 @@ class FormLogin extends React.Component{
                         </FormItem>
                         <FormItem>
                             <Input placeholder="请输入密码" />
-                        </FormItem>
+                        </FormItem>        
                         <FormItem>
                             <Button type="primary">登录</Button>
                         </FormItem>
@@ -34,7 +34,7 @@ class FormLogin extends React.Component{
                         <FormItem>
                             {
                                 getFieldDecorator('userName',{
-                                    initialValue:'',
+                                    initialValue:'Jacks',
                                     rules:[
                                         {
                                             required:true,
@@ -57,8 +57,13 @@ class FormLogin extends React.Component{
                         <FormItem>
                             {
                                 getFieldDecorator('userPwd', {
-                                    initialValue: '',
-                                    rules: []
+                                    initialValue: '123456',
+                                    rules: [
+                                        {
+                                            min:10,
+                                            message:'试试多数输入点'
+                                        }
+                                    ]
                                 })(
                                     <Input prefix={<Icon type="lock" />} type="password" placeholder="请输入密码" />
                                 )

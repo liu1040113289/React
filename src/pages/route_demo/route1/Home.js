@@ -6,11 +6,13 @@ import Topic from './topic'
 export default class Home extends React.Component {
     render() {
         return (
+            // 混合路由组件方式比较凌乱
+            /* 路由加载必须先加载根节点 */
             <HashRouter>
                 <div>
                     <ul>
                         <li>
-                            <Link to="/">Home</Link>
+                            <Link to="/">Main</Link>
                         </li>
                         <li>
                             <Link to="/about">About</Link>

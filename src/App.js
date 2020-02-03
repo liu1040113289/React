@@ -4,6 +4,7 @@ import Header from './components/Header/index'
 import Footer from './components/Footer/index'
 import NavLeft from './components/Navleft/index'
 import './style/common.less'
+
 export default class App extends React.Component{
     constructor(props){
         super(props)
